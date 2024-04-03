@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyectos_clientes",
+  "info": {
+    "singularName": "proyecto-cliente",
+    "pluralName": "proyectos-clientes",
+    "displayName": "Proyectos Clientes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_cliente": {
+      "type": "string",
+      "required": false,
+      "maxLength": 150
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "telefono": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "tipo": {
+      "type": "string",
+      "default": "presupuesto",
+      "private": true
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "desarrollo web",
+        "redisenio web",
+        "tienda online",
+        "academia web",
+        "aplicacion web",
+        "marketing digital",
+        "posisionamiento seo",
+        "rendimiento web",
+        "disenio marca",
+        "servicio varios",
+        "otro"
+      ],
+      "default": "desarrollo web",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": false
+    },
+    "politica_privacidad": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
